@@ -18,14 +18,12 @@
         <div class="panel text-center panel-primary">     
            <div class="panel-heading"><i class='far fa-newspaper' style='font-size:24px'></i><h1 style='font-size:24px; display: inline-block;'> New York Times Search</h1></div>
         </div>
-        <style>
-            
         
-        </style>
 
         <div class="panel panel-default">
             
             <div class="panel-heading"><span class="glyphicon glyphicon-list-alt"></span> Search Parameters</div>
+            
             <div class="panel-body">
                 
                 <div class="form-group">
@@ -60,8 +58,22 @@
                     <input type="text" class="form-control" id="end">
                 </div>
 
-                <span class="glyphicon glyphicon-search"></span> Search
-                <span class="glyphicon glyphicon-trash"></span> Clear Results
+                <div class="glyph glyphSearch" style="display: inline-block;">
+                    <span class="glyphicon glyphicon-search"></span>
+                    Search
+                </div>
+                <div class="glyph glyphClear" style="display: inline-block;">
+                    <span class="glyphicon glyphicon-trash"></span>
+                    Clear Results
+                </div>
+
+                <style>
+                    .glyph:hover{
+                        cursor: hand;
+                        cursor: pointer;
+                        opacity: .5;
+                    }
+                </style>
             </div>
             
             

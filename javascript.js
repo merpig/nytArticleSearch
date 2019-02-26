@@ -1,18 +1,26 @@
 $(document).ready(function() {
+    $(".glyphClear").on("click",function(){
+        $("#srch").val("");
+        $("#records").val(1);
+        $("#start").val("");
+        $("#end").val("");
+        $("#topArticles").empty();
+    });
     
-    $(".glyphicon-search").on("click", function(){
+    $(".glyphSearch").on("click", function(){
 
         
         var apikey = "zQ9iCSsfL4gSho5QqMsWmtBWwZeoPWp7";
         var term = $("#srch").val();
-        var numDocs = $("#records").val();
+        var numDocs = parseInt($("#records").val());
         var startYear = parseInt($("#start").val());
         var endYear = parseInt($("#end").val());
 
         var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + term + "&api-key=" + apikey;
         
-        if(startYear!== NaN) queryURL += "&start_date=" + startYear + "";
-        if(endYear!== NaN) queryURL += "&end_date=" + endYear + "";
+        if(startYear===parseInt($("#start").val())) queryURL += "&start_date=" + startYear + "";
+
+        if(endYear=== parseInt($("#end").val())) queryURL += "&end_date=" + endYear + "";
 
         $.ajax({
             url: queryURL,
@@ -22,7 +30,6 @@ $(document).ready(function() {
             
             for(var i = 0; i < response.response.docs.length; i++){
                 if(i===numDocs) break;
-                console.log(response.response.docs[i]);
                 var title = response.response.docs[i].headline.main;
                 var author = response.response.docs[i].byline.original;
                 var pubYear = response.response.docs[i].pub_date.substring(0,4);
