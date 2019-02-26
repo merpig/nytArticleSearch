@@ -15,10 +15,13 @@
 
     <div class="container">
 
-        <div class="panel text-center" style="background-color: #003153; color: white;">
-            
-                <div class="panel-heading"><i class='far fa-newspaper' style='font-size:24px'></i><h1 style='font-size:24px; display: inline-block;'> New York Times Search</h1></div>
+        <div class="panel text-center panel-primary">     
+           <div class="panel-heading"><i class='far fa-newspaper' style='font-size:24px'></i><h1 style='font-size:24px; display: inline-block;'> New York Times Search</h1></div>
         </div>
+        <style>
+            
+        
+        </style>
 
         <div class="panel panel-default">
             
@@ -26,8 +29,8 @@
             <div class="panel-body">
                 
                 <div class="form-group">
-                    <label for="search">Search Term:</label>
-                    <input type="text" class="form-control" id="search">
+                    <label for="srch">Search Term:</label>
+                    <input type="text" class="form-control" id="srch">
                 </div>
 
                 <div class="form-group">
@@ -47,14 +50,15 @@
                     </select>
                 </div>   
 
-                          <div class="form-group">
-                                <label for="start">Start Year (Optional):</label>
-                                <input type="text" class="form-control" id="start">
-                              </div>
-                              <div class="form-group">
-                                <label for="end">End Year (Optional):</label>
-                                <input type="password" class="form-control" id="end">
-                              </div>
+                <div class="form-group">
+                    <label for="start">Start Year - YYYYMMDD (Optional):</label>
+                    <input type="text" class="form-control" id="start">
+                </div>
+
+                <div class="form-group">
+                    <label for="end">End Year - YYYYMMDD (Optional):</label>
+                    <input type="text" class="form-control" id="end">
+                </div>
 
                 <span class="glyphicon glyphicon-search"></span> Search
                 <span class="glyphicon glyphicon-trash"></span> Clear Results
@@ -64,14 +68,16 @@
         </div>
 
         <div class="panel panel-default">
-                <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> Top Articles</div>
-            <div class="panel-body" id="topArcticles"></div>
+            <div class="panel-heading"><span class="glyphicon glyphicon-list"></span> Top Articles</div>
+        <div class="panel-body" id="topArticles"></div>
             
         </div>
 
         <hr>
 
     </div>
+
+    <script src="javascript.js"></script>
 
 </body>
 
