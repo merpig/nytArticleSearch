@@ -12,7 +12,7 @@ $(document).ready(function() {
         var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + term + "&api-key=" + apikey;
         
         if(startYear!== NaN) queryURL += "&start_date=" + startYear + "";
-        if(endYear!== NaN) queryURL += "&start_date=" + endYear + "";
+        if(endYear!== NaN) queryURL += "&end_date=" + endYear + "";
 
         $.ajax({
             url: queryURL,
